@@ -33,10 +33,10 @@ public class MedicaHistory {
                      entry[2] = med;
                  }
                  else {
-                     System.out.println("would you like to add it now? \n Enter Y for yes and N for no.");
-                     String addmed = keys.next();
+                     System.out.println("would you like to add it now? \nEnter Y for yes and N for no.");
+                     String addmed = keys.nextLine();
                      if (addmed.equals("Y")) {
-                         System.out.println("Here you will enter the name of the medication twice \n " +
+                         System.out.println("Here you will enter the name of the medication twice \n" +
                           "What is the name of the medication?");
                           String medName = keys.nextLine();
                           entry[2] = medName;
@@ -54,7 +54,7 @@ public class MedicaHistory {
 
             System.out.println("Would you like to add another record?" +
                     "Enter Y for yes and N for no");
-            String addAnother = keys.next();
+            String addAnother = keys.nextLine();
             medHistoryList.add(entry);
             if (addAnother.equals("Y")) {
                 keepGoing = true;
@@ -80,8 +80,8 @@ public class MedicaHistory {
         File file = new File("C:\\Users\\dusti\\Desktop\\personalprograms\\Java\\HackUNO\\src\\medicalHistory.txt");
         try (Writer writer = new BufferedWriter(new FileWriter(file, true))) {
             for (int i = 0; medHistoryList.size() > i; i++) {
-                String content = ("Medication name: " + medHistoryList.get(i)[0] + "," + " Dose: " + medHistoryList.get(i)[1]
-                        + "," + " Frequency: " + medHistoryList.get(i)[2] + "\n");
+                String content = ("Illness name: " + medHistoryList.get(i)[0] + "," + " Length of illness: " + medHistoryList.get(i)[1]
+                        + "," + " Controlled by: " + medHistoryList.get(i)[2] + "\n");
                 writer.append(content);
             }
         }
