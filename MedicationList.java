@@ -7,8 +7,8 @@ public class MedicationList {
 
     public static void addEntry() {
             // medication format: med name, dose, frequency
-            boolean keepGoing = true;
-            while (keepGoing) {
+            boolean keepGoingMed = true;
+            while (keepGoingMed) {
                 String[] medication = new String[3];
                 System.out.println("What is the name of the medication?");
                 String medName = keys.nextLine();
@@ -24,15 +24,15 @@ public class MedicationList {
 
                 medList.add(medication);
                 System.out.println("Would you like to add another medication?" +
-                 "Enter Y for yes and N for no");
+                 "\n Enter Y for yes and N for no");
                  String addAnother = keys.nextLine();
                  if (addAnother.equals("Y")) {
-                     keepGoing = true;
+                     keepGoingMed = true;
                      printList();
 
                 }
                 else {
-                    keepGoing = false;
+                    keepGoingMed = false;
                     printList();
 
                 }
