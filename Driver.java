@@ -8,7 +8,7 @@ public class Driver {
         boolean patientCheck = true;
         boolean keepGoing = true;
 
-        System.out.println("Are you a patient, or provider \n Enter 1 for patient, and 2 for provider");
+        System.out.println("Are you a patient, or provider \nEnter 1 for patient, and 2 for provider");
         String userCheck = keys.nextLine();
         if (userCheck.equals("1")) {
             patientCheck = patientLogin();
@@ -16,13 +16,13 @@ public class Driver {
                 // ask the user if they would like to look up their information, add to their information
                 // delete an entry, update an entry
                 while (keepGoing) {
-                    System.out.println("To view your medical or personal data enter 1. \n To add to your medical or personal data enter 2. \n" +
-                            "To delete one of your entries enter 3. \n To update one of your entries enter 4.");
+                    System.out.println("To view your medical or personal data enter 1. \nTo add to your medical or personal data enter 2. \n" +
+                            "To delete one of your entries enter 3. \nTo update one of your entries enter 4.");
                     String selection = keys.nextLine();
                     // search/display
                     if (selection.equals("1")) {
-                        System.out.println("Enter 1 to see your medications. \n Enter 2 to see your medical history. \n" +
-                                "Enter 3 to see your allergies. \n Enter 4 to see your personal data. \n Enter 5 to see all data.");
+                        System.out.println("Enter 1 to see your medications. \nEnter 2 to see your medical history. \n" +
+                                "Enter 3 to see your allergies.\n Enter 4 to see your personal data.\n Enter 5 to see all data.");
                         String displaySelection = keys.nextLine();
                         if (displaySelection.equals("1")) {
                             System.out.println("You are taking: ");
@@ -56,8 +56,8 @@ public class Driver {
 
                     // add
                     else if (selection.equals("2")) {
-                        System.out.println("What would you like to add? \n To add a medication enter 1. \n" +
-                                "To add to your medical history enter 2. \n To add to your allergies enter 3. \n" +
+                        System.out.println("What would you like to add? \nTo add a medication enter 1.\n" +
+                                "To add to your medical history enter 2.\n To add to your allergies enter 3.\n" +
                                 "To add to your personal information enter 4.");
                         String addSelection = keys.next();
                         if (addSelection.equals("1")) {
@@ -73,8 +73,8 @@ public class Driver {
 
                     // delete
                     else if (selection.equals("3")) {
-                        System.out.println("To delete a medication enter 1 \n To delete a medical history enter 2 \n" +
-                                "To delete an allergy enter 3 \n To delete personal information enter 4");
+                        System.out.println("To delete a medication enter 1\n To delete a medical history enter 2\n" +
+                                "To delete an allergy enter 3\n To delete personal information enter 4");
                         String deleteSelection = keys.nextLine();
                         if (deleteSelection.equals("1")) {
                             DeleteInformation.deleteMeds();
@@ -91,8 +91,8 @@ public class Driver {
 
                     // update
                     else if (selection.equals("4")) {
-                        System.out.println("To update a medication enter 1. \n To update your medical history enter" +
-                                " 2. \n To update your allergies enter 3. \n To update personal information enter 4.");
+                        System.out.println("To update a medication enter 1.\n To update your medical history enter" +
+                                " 2.\n To update your allergies enter 3.\n To update personal information enter 4.");
                         String updateSelection = keys.nextLine();
                         if (updateSelection.equals("1")) {
                             UpdateInformation.updateMeds();
@@ -106,10 +106,10 @@ public class Driver {
                             System.out.println("Invalid entry");
                         }
                     } else {
-                        System.out.println("Input not in list. \n Goodbye");
+                        System.out.println("Input not in list.\n Goodbye");
                     }
 
-                    System.out.println("Would you like to do anything else? \n Enter Y for yes, and N for no");
+                    System.out.println("Would you like to do anything else?\n Enter Y for yes, and N for no");
                     String keepGoingCheck = keys.nextLine();
                     if (keepGoingCheck.equals("Y")) {
                         keepGoing = true;
