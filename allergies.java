@@ -12,7 +12,7 @@ import java.util.Scanner;
             boolean keepGoing = true;
             while (keepGoing) {
                 String[] allergy = new String[3];
-                System.out.println("What is the allergy? \n This could be from a medication " +
+                System.out.println("What is the allergy? \nThis could be from a medication " +
                     "or some allergen");
                 String allergyName = keys.nextLine();
                 allergy[0] = allergyName;
@@ -26,9 +26,9 @@ import java.util.Scanner;
                 allergy[2] = triggers;
 
                 allergyList.add(allergy);
-                System.out.println("Would you like to add another medication?" +
+                System.out.println("Would you like to add another allergy?" +
                         "Enter Y for yes and N for no");
-                String addAnother = keys.next();
+                String addAnother = keys.nextLine();
                 if (addAnother.equals("Y")) {
                     keepGoing = true;
                     printList();
@@ -53,8 +53,8 @@ import java.util.Scanner;
             File file = new File("C:\\Users\\dusti\\Desktop\\personalprograms\\Java\\HackUNO\\src\\allergieHistory.txt");
             try (Writer writer = new BufferedWriter(new FileWriter(file, true))) {
                 for (int i = 0; allergyList.size() > i; i++) {
-                    String content = ("Medication name: " + allergyList.get(i)[0] + "," + " Dose: " + allergyList.get(i)[1]
-                            + "," + " Frequency: " + allergyList.get(i)[2] + "\n");
+                    String content = ("Allergy name: " + allergyList.get(i)[0] + "," + " Symptoms: " + allergyList.get(i)[1]
+                            + "," + " Triggers: " + allergyList.get(i)[2] + "\n");
                     writer.append(content);
                 }
             }
@@ -63,3 +63,4 @@ import java.util.Scanner;
             }
         }
 }
+
