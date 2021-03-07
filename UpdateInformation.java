@@ -37,7 +37,7 @@ public class UpdateInformation {
             for (String str : medValues) {
                 System.out.println(str);
             }
-            System.out.println("To update the medication name enter 1. \n To update the dose enter 2." +
+            System.out.println("To update the medication name enter 1. \nTo update the dose enter 2." +
                     "\n To update the frequency enter 3.");
             String updateSelection = keys.nextLine();
             if (updateSelection.equals("1")) {
@@ -106,7 +106,7 @@ public class UpdateInformation {
             for (String str : medHistoryValues) {
                 System.out.println(str);
             }
-            System.out.println("To update the illness name enter 1. \n To update the length of illness enter 2." +
+            System.out.println("To update the illness name enter 1. \nTo update the length of illness enter 2." +
                     "\n To update the controlled by method enter 3.");
             String updateSelection = keys.nextLine();
             if (updateSelection.equals("1")) {
@@ -176,7 +176,7 @@ public class UpdateInformation {
             for (String str : allergyValues) {
                 System.out.println(str);
             }
-            System.out.println("To update the medication name enter 1. \n To update the dose enter 2." +
+            System.out.println("To update the medication name enter 1. \nTo update the dose enter 2." +
                     "\n To update the frequency enter 3.");
             String updateSelection = keys.nextLine();
             if (updateSelection.equals("1")) {
@@ -248,7 +248,7 @@ public class UpdateInformation {
             for (String str : personalInfoValues) {
                 System.out.println(str);
             }
-            System.out.println("To update the medication name enter 1. \n To update the dose enter 2." +
+            System.out.println("To update the medication name enter 1.\nTo update the dose enter 2." +
                     "\n To update the frequency enter 3.");
             String updateSelection = keys.nextLine();
             if (updateSelection.equals("1")) {
